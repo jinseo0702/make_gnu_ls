@@ -40,8 +40,8 @@ void free_all_ls_list(t_list_ls **head);
 void  free_ls_list(t_list_ls **list);
 void free_long_format(t_logformat **long_format);
 void ls_list_remove(t_list_ls **head, const unsigned char c);
-void sort_list(t_list_ls **head, int (*cmp)());
-void sort_reverse_list(t_list_ls **head, int (*cmp)());
+void sort_list(t_list_ls **head, int (*cmp)(const char *, const char *, size_t));
+void sort_reverse_list(t_list_ls **head, int (*cmp)(const char *, const char *, size_t));
 void time_sort_list(t_list_ls **head);
 void time_sort_reverse_list(t_list_ls **head);
 

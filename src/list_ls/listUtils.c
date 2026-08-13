@@ -126,7 +126,7 @@ void ls_list_remove(t_list_ls **head, const unsigned char c) {
     }
 }
 
-void sort_list(t_list_ls **head, int (*cmp)()) {
+void sort_list(t_list_ls **head, int (*cmp)(const char *, const char *, size_t)) {
     int swapped;
     t_list_ls *cur;
     t_list_ls *next;
@@ -155,7 +155,7 @@ void sort_list(t_list_ls **head, int (*cmp)()) {
     }while (swapped);
 }
 
-void sort_reverse_list(t_list_ls **head, int (*cmp)()) {
+void sort_reverse_list(t_list_ls **head, int (*cmp)(const char *, const char *, size_t)) {
     int swapped;
     t_list_ls *cur;
     t_list_ls *next;
