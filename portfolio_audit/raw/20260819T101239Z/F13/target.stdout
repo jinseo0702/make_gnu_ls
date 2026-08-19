@@ -1,0 +1,4 @@
+total 8
+lrwxrwxrwx 1 jinseo jinseo 85 Aug 19 10:12 absolute_link -> /home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z/fixtures/F13/target 
+lrwxrwxrwx 1 jinseo jinseo  6 Aug 19 10:12 relative_link -> target 
+-rw-r--r-- 1 jinseo jinseo  6 Aug 18 10:12 target 

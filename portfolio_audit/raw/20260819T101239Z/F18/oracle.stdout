@@ -1,0 +1,6 @@
+fixtures/F18:
+link_to_dir
+real_dir
+
+fixtures/F18/real_dir:
+inside

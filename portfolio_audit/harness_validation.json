@@ -1,0 +1,36 @@
+{
+  "check_count": 5,
+  "detected_count": 5,
+  "checks": [
+    {
+      "id": "H01",
+      "defect": "missing entry",
+      "classification": "FAIL",
+      "detected": true
+    },
+    {
+      "id": "H02",
+      "defect": "extra entry",
+      "classification": "FAIL",
+      "detected": true
+    },
+    {
+      "id": "H03",
+      "defect": "wrong order",
+      "classification": "FAIL",
+      "detected": true
+    },
+    {
+      "id": "H04",
+      "defect": "wrong size metadata",
+      "classification": "FAIL",
+      "detected": true
+    },
+    {
+      "id": "H05",
+      "defect": "wrong success exit status on error",
+      "classification": "FAIL",
+      "detected": true
+    }
+  ]
+}

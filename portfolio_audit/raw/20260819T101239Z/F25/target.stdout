@@ -1,0 +1,22 @@
+fixtures/F25:
+total 24
+lrwxrwxrwx  1 jinseo jinseo    7 Aug 19 10:12 link -> visible 
+drwxrwxr-x  4 jinseo jinseo 4096 Aug 19 10:12 . 
+drwxrwxr-x  2 jinseo jinseo 4096 Aug 19 10:12 .hidden_dir 
+drwxrwxr-x  2 jinseo jinseo 4096 Aug 19 10:12 dir 
+drwxrwxr-x 25 jinseo jinseo 4096 Aug 19 10:12 .. 
+-rw-r--r--  1 jinseo jinseo    6 Aug 18 10:12 .hidden 
+-rw-r--r--  1 jinseo jinseo    7 Aug 18 10:12 visible 
+
+fixtures/F25/.hidden_dir:
+total 12
+drwxrwxr-x 4 jinseo jinseo 4096 Aug 19 10:12 .. 
+drwxrwxr-x 2 jinseo jinseo 4096 Aug 19 10:12 . 
+-rw-r--r-- 1 jinseo jinseo    6 Aug 18 10:12 secret 
+
+fixtures/F25/dir:
+total 12
+drwxrwxr-x 4 jinseo jinseo 4096 Aug 19 10:12 .. 
+drwxrwxr-x 2 jinseo jinseo 4096 Aug 19 10:12 . 
+-rw-r--r-- 1 jinseo jinseo    6 Aug 18 10:12 nested 
+

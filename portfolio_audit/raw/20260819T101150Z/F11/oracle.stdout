@@ -1,0 +1,4 @@
+total 12
+-rwxr-sr-x 1 jinseo jinseo 1 Aug 18 10:11 setgid
+-rwsr-xr-x 1 jinseo jinseo 1 Aug 18 10:11 setuid
+drwxrwxrwt 2 jinseo jinseo 4 Aug 18 10:11 sticky

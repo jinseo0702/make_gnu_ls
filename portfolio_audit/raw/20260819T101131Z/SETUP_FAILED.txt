@@ -1,0 +1,7 @@
+SETUP FAILURE — not a target result
+
+The first sandboxed fixture setup could not bind the F12 Unix-domain socket and stopped before any case execution:
+
+PermissionError: [Errno 1] Operation not permitted
+
+The approved suite was rerun outside that sandbox restriction. This directory is retained to distinguish setup failure from target failure.

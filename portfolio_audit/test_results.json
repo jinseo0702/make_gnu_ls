@@ -1,0 +1,2054 @@
+{
+  "schema_version": 1,
+  "run_id": "20260819T101239Z",
+  "commit": "f48ad3f9026b78f4daa585973adf3b6dce92f417",
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC0",
+    "TERM": "dumb"
+  },
+  "target": {
+    "path": "/home/jinseo/duo/make_gnu_ls/ft_ls",
+    "sha256": "96f629d9bd7a0595ed7ad481db0386cc56540853a0850f3bea808ac678ac2d8c"
+  },
+  "oracle": {
+    "path": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+    "sha256": "53a9c0557a948069d56f964cf21c7c0854bb2677d9985080369ed1e172161625",
+    "version": "ls (GNU coreutils) 9.4",
+    "provenance": "/snap/core24/1643/usr/bin/ls"
+  },
+  "case_count": 25,
+  "counts": {
+    "PASS": 16,
+    "PARTIAL": 1,
+    "FAIL": 8,
+    "CRASH": 0
+  },
+  "results": [
+    {
+      "id": "F01",
+      "title": "default regular-name listing",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [
+          "alpha",
+          "mu",
+          "zeta"
+        ],
+        "oracle_names": [
+          "alpha",
+          "mu",
+          "zeta"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z/fixtures/F01",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.623,
+        "stdout_file": "F01/target.stdout",
+        "stderr_file": "F01/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z/fixtures/F01",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.753,
+        "stdout_file": "F01/oracle.stdout",
+        "stderr_file": "F01/oracle.stderr"
+      }
+    },
+    {
+      "id": "F02",
+      "title": "explicit empty directory",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [],
+        "oracle_names": [],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F02"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.403,
+        "stdout_file": "F02/target.stdout",
+        "stderr_file": "F02/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "fixtures/F02"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.839,
+        "stdout_file": "F02/oracle.stdout",
+        "stderr_file": "F02/oracle.stderr"
+      }
+    },
+    {
+      "id": "F03",
+      "title": "hidden-only directory without -a",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [],
+        "oracle_names": [],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F03"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.426,
+        "stdout_file": "F03/target.stdout",
+        "stderr_file": "F03/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "fixtures/F03"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.768,
+        "stdout_file": "F03/oracle.stdout",
+        "stderr_file": "F03/oracle.stderr"
+      }
+    },
+    {
+      "id": "F04",
+      "title": "-a inclusion and ordering",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [
+          ".",
+          "..",
+          ".hidden",
+          "alpha",
+          "zeta"
+        ],
+        "oracle_names": [
+          ".",
+          "..",
+          ".hidden",
+          "alpha",
+          "zeta"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-a",
+          "fixtures/F04"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.005,
+        "stdout_file": "F04/target.stdout",
+        "stderr_file": "F04/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-a",
+          "fixtures/F04"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.855,
+        "stdout_file": "F04/oracle.stdout",
+        "stderr_file": "F04/oracle.stderr"
+      }
+    },
+    {
+      "id": "F05",
+      "title": "-r reverse name order",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [
+          "gamma",
+          "beta",
+          "alpha"
+        ],
+        "oracle_names": [
+          "gamma",
+          "beta",
+          "alpha"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-r",
+          "fixtures/F05"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.751,
+        "stdout_file": "F05/target.stdout",
+        "stderr_file": "F05/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-r",
+          "fixtures/F05"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.797,
+        "stdout_file": "F05/oracle.stdout",
+        "stderr_file": "F05/oracle.stderr"
+      }
+    },
+    {
+      "id": "F06",
+      "title": "-t newest-first with nanoseconds",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [
+          "new",
+          "middle",
+          "old"
+        ],
+        "oracle_names": [
+          "new",
+          "middle",
+          "old"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-t",
+          "fixtures/F06"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.016,
+        "stdout_file": "F06/target.stdout",
+        "stderr_file": "F06/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-t",
+          "fixtures/F06"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.925,
+        "stdout_file": "F06/oracle.stdout",
+        "stderr_file": "F06/oracle.stderr"
+      }
+    },
+    {
+      "id": "F07",
+      "title": "-tr oldest-first",
+      "evaluator": "names",
+      "classification": "PASS",
+      "summary": "ordered name vector matches GNU ls",
+      "details": {
+        "target_names": [
+          "old",
+          "middle",
+          "new"
+        ],
+        "oracle_names": [
+          "old",
+          "middle",
+          "new"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-tr",
+          "fixtures/F07"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.891,
+        "stdout_file": "F07/target.stdout",
+        "stderr_file": "F07/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-tr",
+          "fixtures/F07"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.653,
+        "stdout_file": "F07/oracle.stdout",
+        "stderr_file": "F07/oracle.stderr"
+      }
+    },
+    {
+      "id": "F08",
+      "title": "-t equal-time name tie-break",
+      "evaluator": "names",
+      "classification": "FAIL",
+      "summary": "ordered names or success/error behavior differ",
+      "details": {
+        "target_names": [
+          "mu",
+          "alpha",
+          "zeta"
+        ],
+        "oracle_names": [
+          "alpha",
+          "mu",
+          "zeta"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-t",
+          "fixtures/F08"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.699,
+        "stdout_file": "F08/target.stdout",
+        "stderr_file": "F08/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-t",
+          "fixtures/F08"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.605,
+        "stdout_file": "F08/oracle.stdout",
+        "stderr_file": "F08/oracle.stderr"
+      }
+    },
+    {
+      "id": "F09",
+      "title": "-l sizes and hard-link counts",
+      "evaluator": "long",
+      "classification": "PASS",
+      "summary": "long-format semantic records match GNU ls",
+      "details": {
+        "target": {
+          "total": "20",
+          "records": [
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4",
+              "date": "Aug 18 10:12",
+              "name": "hard_alias"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4",
+              "date": "Aug 18 10:12",
+              "name": "hard_source"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "one"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "10",
+              "date": "Aug 18 10:12",
+              "name": "ten"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1000",
+              "date": "Aug 18 10:12",
+              "name": "thousand"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "20",
+          "records": [
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4",
+              "date": "Aug 18 10:12",
+              "name": "hard_alias"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4",
+              "date": "Aug 18 10:12",
+              "name": "hard_source"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "one"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "10",
+              "date": "Aug 18 10:12",
+              "name": "ten"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1000",
+              "date": "Aug 18 10:12",
+              "name": "thousand"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F09"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.818,
+        "stdout_file": "F09/target.stdout",
+        "stderr_file": "F09/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F09"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.833,
+        "stdout_file": "F09/oracle.stdout",
+        "stderr_file": "F09/oracle.stderr"
+      }
+    },
+    {
+      "id": "F10",
+      "title": "-l basic permission modes",
+      "evaluator": "long",
+      "classification": "PASS",
+      "summary": "long-format semantic records match GNU ls",
+      "details": {
+        "target": {
+          "total": "12",
+          "records": [
+            {
+              "mode": "----------",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "mode000"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "mode644"
+            },
+            {
+              "mode": "-rwxr-xr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "mode755"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "12",
+          "records": [
+            {
+              "mode": "----------",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "mode000"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "mode644"
+            },
+            {
+              "mode": "-rwxr-xr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "mode755"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F10"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.978,
+        "stdout_file": "F10/target.stdout",
+        "stderr_file": "F10/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F10"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.721,
+        "stdout_file": "F10/oracle.stdout",
+        "stderr_file": "F10/oracle.stderr"
+      }
+    },
+    {
+      "id": "F11",
+      "title": "-l special permission bits",
+      "evaluator": "long",
+      "classification": "FAIL",
+      "summary": "long-format metadata/order/error behavior differ",
+      "details": {
+        "target": {
+          "total": "12",
+          "records": [
+            {
+              "mode": "-rwxr-xr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "setgid"
+            },
+            {
+              "mode": "-rwxr-xr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "setuid"
+            },
+            {
+              "mode": "drwxrwxrwx",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4096",
+              "date": "Aug 18 10:12",
+              "name": "sticky"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "12",
+          "records": [
+            {
+              "mode": "-rwxr-sr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "setgid"
+            },
+            {
+              "mode": "-rwsr-xr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "setuid"
+            },
+            {
+              "mode": "drwxrwxrwt",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4096",
+              "date": "Aug 18 10:12",
+              "name": "sticky"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F11"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.798,
+        "stdout_file": "F11/target.stdout",
+        "stderr_file": "F11/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F11"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.598,
+        "stdout_file": "F11/oracle.stdout",
+        "stderr_file": "F11/oracle.stderr"
+      }
+    },
+    {
+      "id": "F12",
+      "title": "-l regular directory FIFO socket types",
+      "evaluator": "long",
+      "classification": "FAIL",
+      "summary": "long-format metadata/order/error behavior differ",
+      "details": {
+        "target": {
+          "total": "8",
+          "records": [
+            {
+              "mode": "drwxrwxr-x",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4096",
+              "date": "Aug 18 10:12",
+              "name": "directory"
+            },
+            {
+              "mode": "Prw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "0",
+              "date": "Aug 18 10:12",
+              "name": "fifo"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "regular"
+            },
+            {
+              "mode": "srwxrwxr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "0",
+              "date": "Aug 18 10:12",
+              "name": "socket"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "8",
+          "records": [
+            {
+              "mode": "drwxrwxr-x",
+              "nlink": "2",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "4096",
+              "date": "Aug 18 10:12",
+              "name": "directory"
+            },
+            {
+              "mode": "prw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "0",
+              "date": "Aug 18 10:12",
+              "name": "fifo"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 18 10:12",
+              "name": "regular"
+            },
+            {
+              "mode": "srwxrwxr-x",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "0",
+              "date": "Aug 18 10:12",
+              "name": "socket"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F12"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.793,
+        "stdout_file": "F12/target.stdout",
+        "stderr_file": "F12/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F12"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.892,
+        "stdout_file": "F12/oracle.stdout",
+        "stderr_file": "F12/oracle.stderr"
+      }
+    },
+    {
+      "id": "F13",
+      "title": "-l valid symlink targets",
+      "evaluator": "long",
+      "classification": "PASS",
+      "summary": "long-format semantic records match GNU ls",
+      "details": {
+        "target": {
+          "total": "8",
+          "records": [
+            {
+              "mode": "lrwxrwxrwx",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "85",
+              "date": "Aug 19 10:12",
+              "name": "absolute_link -> /home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z/fixtures/F13/target"
+            },
+            {
+              "mode": "lrwxrwxrwx",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "6",
+              "date": "Aug 19 10:12",
+              "name": "relative_link -> target"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "6",
+              "date": "Aug 18 10:12",
+              "name": "target"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "8",
+          "records": [
+            {
+              "mode": "lrwxrwxrwx",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "85",
+              "date": "Aug 19 10:12",
+              "name": "absolute_link -> /home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z/fixtures/F13/target"
+            },
+            {
+              "mode": "lrwxrwxrwx",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "6",
+              "date": "Aug 19 10:12",
+              "name": "relative_link -> target"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "6",
+              "date": "Aug 18 10:12",
+              "name": "target"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F13"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.644,
+        "stdout_file": "F13/target.stdout",
+        "stderr_file": "F13/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F13"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.721,
+        "stdout_file": "F13/oracle.stdout",
+        "stderr_file": "F13/oracle.stderr"
+      }
+    },
+    {
+      "id": "F14",
+      "title": "-l broken symlink",
+      "evaluator": "long",
+      "classification": "PASS",
+      "summary": "long-format semantic records match GNU ls",
+      "details": {
+        "target": {
+          "total": "0",
+          "records": [
+            {
+              "mode": "lrwxrwxrwx",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "14",
+              "date": "Aug 19 10:12",
+              "name": "broken -> missing-target"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "0",
+          "records": [
+            {
+              "mode": "lrwxrwxrwx",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "14",
+              "date": "Aug 19 10:12",
+              "name": "broken -> missing-target"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F14"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.625,
+        "stdout_file": "F14/target.stdout",
+        "stderr_file": "F14/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F14"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.534,
+        "stdout_file": "F14/oracle.stdout",
+        "stderr_file": "F14/oracle.stderr"
+      }
+    },
+    {
+      "id": "F15",
+      "title": "-l recent old and near-future timestamps",
+      "evaluator": "long",
+      "classification": "PASS",
+      "summary": "long-format semantic records match GNU ls",
+      "details": {
+        "target": {
+          "total": "12",
+          "records": [
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 19 2026",
+              "name": "future_30m"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Jan 31 2026",
+              "name": "old"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 19 09:12",
+              "name": "recent"
+            }
+          ]
+        },
+        "oracle": {
+          "total": "12",
+          "records": [
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 19 2026",
+              "name": "future_30m"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Jan 31 2026",
+              "name": "old"
+            },
+            {
+              "mode": "-rw-r--r--",
+              "nlink": "1",
+              "owner": "jinseo",
+              "group": "jinseo",
+              "size": "1",
+              "date": "Aug 19 09:12",
+              "name": "recent"
+            }
+          ]
+        },
+        "parse_error": null,
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-l",
+          "fixtures/F15"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.638,
+        "stdout_file": "F15/target.stdout",
+        "stderr_file": "F15/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-l",
+          "fixtures/F15"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.632,
+        "stdout_file": "F15/oracle.stdout",
+        "stderr_file": "F15/oracle.stderr"
+      }
+    },
+    {
+      "id": "F16",
+      "title": "-R two-level traversal",
+      "evaluator": "sections_short",
+      "classification": "PASS",
+      "summary": "recursive/multi-operand sections match GNU ls",
+      "details": {
+        "target_sections": [
+          {
+            "header": "fixtures/F16",
+            "names": [
+              "dir_a",
+              "dir_b",
+              "root_a",
+              "root_b"
+            ]
+          },
+          {
+            "header": "fixtures/F16/dir_a",
+            "names": [
+              "a_file",
+              "nested"
+            ]
+          },
+          {
+            "header": "fixtures/F16/dir_a/nested",
+            "names": [
+              "deep"
+            ]
+          },
+          {
+            "header": "fixtures/F16/dir_b",
+            "names": [
+              "b_file"
+            ]
+          }
+        ],
+        "oracle_sections": [
+          {
+            "header": "fixtures/F16",
+            "names": [
+              "dir_a",
+              "dir_b",
+              "root_a",
+              "root_b"
+            ]
+          },
+          {
+            "header": "fixtures/F16/dir_a",
+            "names": [
+              "a_file",
+              "nested"
+            ]
+          },
+          {
+            "header": "fixtures/F16/dir_a/nested",
+            "names": [
+              "deep"
+            ]
+          },
+          {
+            "header": "fixtures/F16/dir_b",
+            "names": [
+              "b_file"
+            ]
+          }
+        ],
+        "target_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-R",
+          "fixtures/F16"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.737,
+        "stdout_file": "F16/target.stdout",
+        "stderr_file": "F16/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-R",
+          "fixtures/F16"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.681,
+        "stdout_file": "F16/oracle.stdout",
+        "stderr_file": "F16/oracle.stderr"
+      }
+    },
+    {
+      "id": "F17",
+      "title": "-Ra hidden subdirectory traversal",
+      "evaluator": "sections_short",
+      "classification": "PASS",
+      "summary": "recursive/multi-operand sections match GNU ls",
+      "details": {
+        "target_sections": [
+          {
+            "header": "fixtures/F17",
+            "names": [
+              ".",
+              "..",
+              ".hidden_file",
+              ".secret",
+              "visible_dir"
+            ]
+          },
+          {
+            "header": "fixtures/F17/.secret",
+            "names": [
+              ".",
+              "..",
+              "inside_hidden"
+            ]
+          },
+          {
+            "header": "fixtures/F17/visible_dir",
+            "names": [
+              ".",
+              "..",
+              "inside_visible"
+            ]
+          }
+        ],
+        "oracle_sections": [
+          {
+            "header": "fixtures/F17",
+            "names": [
+              ".",
+              "..",
+              ".hidden_file",
+              ".secret",
+              "visible_dir"
+            ]
+          },
+          {
+            "header": "fixtures/F17/.secret",
+            "names": [
+              ".",
+              "..",
+              "inside_hidden"
+            ]
+          },
+          {
+            "header": "fixtures/F17/visible_dir",
+            "names": [
+              ".",
+              "..",
+              "inside_visible"
+            ]
+          }
+        ],
+        "target_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-Ra",
+          "fixtures/F17"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.851,
+        "stdout_file": "F17/target.stdout",
+        "stderr_file": "F17/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-Ra",
+          "fixtures/F17"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.856,
+        "stdout_file": "F17/oracle.stdout",
+        "stderr_file": "F17/oracle.stderr"
+      }
+    },
+    {
+      "id": "F18",
+      "title": "-R does not follow directory symlink",
+      "evaluator": "sections_short",
+      "classification": "PASS",
+      "summary": "recursive/multi-operand sections match GNU ls",
+      "details": {
+        "target_sections": [
+          {
+            "header": "fixtures/F18",
+            "names": [
+              "link_to_dir",
+              "real_dir"
+            ]
+          },
+          {
+            "header": "fixtures/F18/real_dir",
+            "names": [
+              "inside"
+            ]
+          }
+        ],
+        "oracle_sections": [
+          {
+            "header": "fixtures/F18",
+            "names": [
+              "link_to_dir",
+              "real_dir"
+            ]
+          },
+          {
+            "header": "fixtures/F18/real_dir",
+            "names": [
+              "inside"
+            ]
+          }
+        ],
+        "target_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-R",
+          "fixtures/F18"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.825,
+        "stdout_file": "F18/target.stdout",
+        "stderr_file": "F18/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-R",
+          "fixtures/F18"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.759,
+        "stdout_file": "F18/oracle.stdout",
+        "stderr_file": "F18/oracle.stderr"
+      }
+    },
+    {
+      "id": "F19",
+      "title": "multiple directory operands",
+      "evaluator": "sections_short",
+      "classification": "PASS",
+      "summary": "recursive/multi-operand sections match GNU ls",
+      "details": {
+        "target_sections": [
+          {
+            "header": "fixtures/F19_one",
+            "names": [
+              "one_file"
+            ]
+          },
+          {
+            "header": "fixtures/F19_two",
+            "names": [
+              "two_file"
+            ]
+          }
+        ],
+        "oracle_sections": [
+          {
+            "header": "fixtures/F19_one",
+            "names": [
+              "one_file"
+            ]
+          },
+          {
+            "header": "fixtures/F19_two",
+            "names": [
+              "two_file"
+            ]
+          }
+        ],
+        "target_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F19_one",
+          "fixtures/F19_two"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.509,
+        "stdout_file": "F19/target.stdout",
+        "stderr_file": "F19/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "fixtures/F19_one",
+          "fixtures/F19_two"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.561,
+        "stdout_file": "F19/oracle.stdout",
+        "stderr_file": "F19/oracle.stderr"
+      }
+    },
+    {
+      "id": "F20",
+      "title": "nonexistent operand error",
+      "evaluator": "error",
+      "classification": "FAIL",
+      "summary": "operand error status or diagnostic behavior differs",
+      "details": {
+        "target_returncode": 0,
+        "oracle_returncode": 2,
+        "target_stdout": "",
+        "oracle_stdout": "",
+        "target_stderr": "ls : Opendir Error 'fixtures/F20_missing'\n",
+        "oracle_stderr": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls: cannot access 'fixtures/F20_missing': No such file or directory\n"
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F20_missing"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.398,
+        "stdout_file": "F20/target.stdout",
+        "stderr_file": "F20/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "fixtures/F20_missing"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 2,
+        "timed_out": false,
+        "elapsed_ms": 1.531,
+        "stdout_file": "F20/oracle.stdout",
+        "stderr_file": "F20/oracle.stderr"
+      }
+    },
+    {
+      "id": "F21",
+      "title": "mixed valid and nonexistent operands",
+      "evaluator": "error",
+      "classification": "FAIL",
+      "summary": "operand error status or diagnostic behavior differs",
+      "details": {
+        "target_returncode": 0,
+        "oracle_returncode": 2,
+        "target_stdout": "fixtures/F21_valid:\nvalid_file  \n\n",
+        "oracle_stdout": "fixtures/F21_valid:\nvalid_file\n",
+        "target_stderr": "ls : Opendir Error 'fixtures/F21_missing'\n",
+        "oracle_stderr": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls: cannot access 'fixtures/F21_missing': No such file or directory\n"
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F21_valid",
+          "fixtures/F21_missing"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.63,
+        "stdout_file": "F21/target.stdout",
+        "stderr_file": "F21/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "fixtures/F21_valid",
+          "fixtures/F21_missing"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 2,
+        "timed_out": false,
+        "elapsed_ms": 1.573,
+        "stdout_file": "F21/oracle.stdout",
+        "stderr_file": "F21/oracle.stderr"
+      }
+    },
+    {
+      "id": "F22",
+      "title": "regular-file operand",
+      "evaluator": "file_operand",
+      "classification": "FAIL",
+      "summary": "regular-file operand is not listed like GNU ls",
+      "details": {
+        "target_returncode": 0,
+        "oracle_returncode": 0,
+        "target_stdout": "",
+        "oracle_stdout": "fixtures/F22_file\n",
+        "target_stderr": "ls : Opendir Error 'fixtures/F22_file'\n",
+        "oracle_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F22_file"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.375,
+        "stdout_file": "F22/target.stdout",
+        "stderr_file": "F22/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "fixtures/F22_file"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.578,
+        "stdout_file": "F22/oracle.stdout",
+        "stderr_file": "F22/oracle.stderr"
+      }
+    },
+    {
+      "id": "F23",
+      "title": "invalid short option",
+      "evaluator": "invalid_option",
+      "classification": "FAIL",
+      "summary": "invalid-option exit status or channel differs",
+      "details": {
+        "target_returncode": 4,
+        "oracle_returncode": 2,
+        "target_stderr": "ls : invalid option --  'z'\n",
+        "oracle_stderr": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls: invalid option -- 'z'\nTry '/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls --help' for more information.\n"
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-z"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 4,
+        "timed_out": false,
+        "elapsed_ms": 0.421,
+        "stdout_file": "F23/target.stdout",
+        "stderr_file": "F23/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "-z"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 2,
+        "timed_out": false,
+        "elapsed_ms": 1.641,
+        "stdout_file": "F23/oracle.stdout",
+        "stderr_file": "F23/oracle.stderr"
+      }
+    },
+    {
+      "id": "F24",
+      "title": "special filename byte preservation",
+      "evaluator": "special_names",
+      "classification": "PARTIAL",
+      "summary": "all filename bytes are emitted, but whitespace/newline delimiters are ambiguous",
+      "details": {
+        "target_matches_expected_literal_stream": true,
+        "oracle_nul_vector_matches_fixture": true,
+        "ordered_names_escaped": [
+          "-leading-dash",
+          "has\\ttab",
+          "has\\nnewline",
+          "has  two spaces",
+          "has space",
+          "plain"
+        ],
+        "target_returncode": 0,
+        "oracle_returncode": 0
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "fixtures/F24"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 0.656,
+        "stdout_file": "F24/target.stdout",
+        "stderr_file": "F24/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--zero",
+          "fixtures/F24"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.755,
+        "stdout_file": "F24/oracle.stdout",
+        "stderr_file": "F24/oracle.stderr"
+      }
+    },
+    {
+      "id": "F25",
+      "title": "combined -lRat recursive interaction",
+      "evaluator": "sections_long",
+      "classification": "FAIL",
+      "summary": "combined option semantics differ",
+      "details": {
+        "target_sections": [
+          {
+            "header": "fixtures/F25",
+            "total": "24",
+            "records": [
+              {
+                "mode": "lrwxrwxrwx",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "7",
+                "date": "Aug 19 10:12",
+                "name": "link -> visible"
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "4",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "."
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".hidden_dir"
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "dir"
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "25",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".."
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "6",
+                "date": "Aug 18 10:12",
+                "name": ".hidden"
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "7",
+                "date": "Aug 18 10:12",
+                "name": "visible"
+              }
+            ]
+          },
+          {
+            "header": "fixtures/F25/.hidden_dir",
+            "total": "12",
+            "records": [
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "4",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".."
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "."
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "6",
+                "date": "Aug 18 10:12",
+                "name": "secret"
+              }
+            ]
+          },
+          {
+            "header": "fixtures/F25/dir",
+            "total": "12",
+            "records": [
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "4",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".."
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "."
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "6",
+                "date": "Aug 18 10:12",
+                "name": "nested"
+              }
+            ]
+          }
+        ],
+        "oracle_sections": [
+          {
+            "header": "fixtures/F25",
+            "total": "24",
+            "records": [
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "4",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "."
+              },
+              {
+                "mode": "lrwxrwxrwx",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "7",
+                "date": "Aug 19 10:12",
+                "name": "link -> visible"
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".hidden_dir"
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "dir"
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "25",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".."
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "6",
+                "date": "Aug 18 10:12",
+                "name": ".hidden"
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "7",
+                "date": "Aug 18 10:12",
+                "name": "visible"
+              }
+            ]
+          },
+          {
+            "header": "fixtures/F25/.hidden_dir",
+            "total": "12",
+            "records": [
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "4",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".."
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "."
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "6",
+                "date": "Aug 18 10:12",
+                "name": "secret"
+              }
+            ]
+          },
+          {
+            "header": "fixtures/F25/dir",
+            "total": "12",
+            "records": [
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "4",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": ".."
+              },
+              {
+                "mode": "drwxrwxr-x",
+                "nlink": "2",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "4096",
+                "date": "Aug 19 10:12",
+                "name": "."
+              },
+              {
+                "mode": "-rw-r--r--",
+                "nlink": "1",
+                "owner": "jinseo",
+                "group": "jinseo",
+                "size": "6",
+                "date": "Aug 18 10:12",
+                "name": "nested"
+              }
+            ]
+          }
+        ],
+        "parse_error": null,
+        "target_returncode": 0,
+        "target_stderr": ""
+      },
+      "target": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/ft_ls",
+          "-lRat",
+          "fixtures/F25"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.378,
+        "stdout_file": "F25/target.stdout",
+        "stderr_file": "F25/target.stderr"
+      },
+      "oracle": {
+        "argv": [
+          "/home/jinseo/duo/make_gnu_ls/portfolio_audit/bin/gnu-ls",
+          "--color=never",
+          "--quoting-style=literal",
+          "-1",
+          "--time-style=locale",
+          "-lRat",
+          "fixtures/F25"
+        ],
+        "cwd": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_ms": 1.838,
+        "stdout_file": "F25/oracle.stdout",
+        "stderr_file": "F25/oracle.stderr"
+      }
+    }
+  ],
+  "raw_root": "/home/jinseo/duo/make_gnu_ls/portfolio_audit/raw/20260819T101239Z"
+}

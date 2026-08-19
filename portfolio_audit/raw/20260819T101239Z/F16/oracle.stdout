@@ -1,0 +1,15 @@
+fixtures/F16:
+dir_a
+dir_b
+root_a
+root_b
+
+fixtures/F16/dir_a:
+a_file
+nested
+
+fixtures/F16/dir_a/nested:
+deep
+
+fixtures/F16/dir_b:
+b_file

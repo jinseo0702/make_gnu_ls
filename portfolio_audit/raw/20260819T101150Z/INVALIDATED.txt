@@ -1,0 +1,5 @@
+INVALIDATED HARNESS RUN — do not use as baseline
+
+The runner set BLOCK_SIZE=1024. GNU ls applied that setting to displayed long-format file sizes as well as block totals, producing false size differences against ft_ls.
+
+Raw output is retained for auditability. A corrected full-suite rerun with BLOCK_SIZE/BLOCKSIZE/POSIXLY_CORRECT unset supersedes this result.

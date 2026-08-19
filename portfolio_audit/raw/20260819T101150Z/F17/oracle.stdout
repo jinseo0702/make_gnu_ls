@@ -1,0 +1,16 @@
+fixtures/F17:
+.
+..
+.hidden_file
+.secret
+visible_dir
+
+fixtures/F17/.secret:
+.
+..
+inside_hidden
+
+fixtures/F17/visible_dir:
+.
+..
+inside_visible
